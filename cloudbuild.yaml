@@ -32,13 +32,6 @@ images:
   - '$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
 options:
   substitutionOption: ALLOW_LOOSE
-substitutions:
-  _TRIGGER_ID: 811e46c3-af9d-456d-afed-ec770d8fa8ab
-  _PLATFORM: managed
-  _SERVICE_NAME: predict-smile-ui
-  _DEPLOY_REGION: europe-west1
-  _GCR_HOSTNAME: eu.gcr.io
-  _LABELS: gcb-trigger-id=811e46c3-af9d-456d-afed-ec770d8fa8ab
 tags:
   - gcp-cloud-build-deploy-cloud-run
   - gcp-cloud-build-deploy-cloud-run-managed
