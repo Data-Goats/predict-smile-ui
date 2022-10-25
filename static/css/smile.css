@@ -1,0 +1,25 @@
+.title {
+	width: 80%;
+	height: 70px;
+	border-bottom: 1px solid #999;
+	text-align: center;
+}
+
+h1 {
+	color: #666;
+}
+
+body {
+    background-color: #07fc2c;
+    align-items: center;
+    align-content: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
