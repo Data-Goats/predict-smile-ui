@@ -37,19 +37,20 @@ def upload_image():
         flash('No image selected for uploading')
         return redirect(request.url)
     if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        #print('upload_image filename: ' + filename)
-        flash('Image successfully uploaded and displayed below')
-        return render_template('index.html', filename=filename)
+        url = "https://predict-smile-api-brxof4i4bq-ew.a.run.app/smile_predictor/"
+        payload={}
+        headers = {}
+        sendFile = {"file": (file.filename, file.stream, file.mimetype)}
+        response = requests.request("POST", url, headers=headers, data=payload, files=sendFile)
+        print(response.text)
+        if "true" in response.text:
+            return render_template('smile.html')
+        else:
+            return render_template('sad.html')
     else:
         flash('Allowed image types are - png, jpg, jpeg, gif')
         return redirect(request.url)
  
-@app.route('/display/<filename>')
-def display_image(filename):
-    #print('display_image filename: ' + filename)
-    return redirect(url_for('static', filename='uploads/' + filename), code=301)
  
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001, debug=True)
