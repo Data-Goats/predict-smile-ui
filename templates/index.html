@@ -11,11 +11,22 @@
 <p><h1 align="center"> Smile Detector AI</h1></p>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="https://storage.googleapis.com/smile_prediction_assets/video_data.mp4" type ="video/mp4">
+    </video>
 
-    <form method=post enctype=multipart/form-data>
-        <input type=file name=file>
-        <input type=submit value=upload>
-    </form>
+    <div class="content">
+
+        <h1>Smile prediction AI</h1>
+
+        <p>With this AI we predict if the person on a picture smiles or not, please do not hesitate to try it!</p>
+        
+        <form method=post enctype=multipart/form-data>
+            <input type=file name=file>
+            <input type=submit value=upload>
+        </form>
+
+    </div>
 
 </body>
 
