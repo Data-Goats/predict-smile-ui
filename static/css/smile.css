@@ -10,16 +10,20 @@ h1 {
 }
 
 body {
-    background-color: #07fc2c;
-    align-items: center;
-    align-content: center;
+    background-color: rgb(212, 251, 215);
+    text-align: center; 
+    padding: 40px 0;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+.card {
+    background: white;
+    padding: 60px; 
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+
 
 
