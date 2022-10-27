@@ -25,7 +25,7 @@ def allowed_file(filename):
  
 @app.route('/')
 def home():
-    return render_template('sad.html')
+    return render_template('index.html')
  
 @app.route('/', methods=['POST'])
 def upload_image():
